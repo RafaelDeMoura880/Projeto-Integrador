@@ -44,9 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 1791351017
     locked: 0
-  - name: Scenario
-    uniqueID: 1398678967
-    locked: 0
   - name: Characters
     uniqueID: 969699931
+    locked: 0
+  - name: Scenario
+    uniqueID: 1398678967
     locked: 0
