@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 954028335}
   - component: {fileID: 954028334}
   m_Layer: 0
-  m_Name: Tilemap_Scenario
+  m_Name: _Scenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 971010431}
   - component: {fileID: 971010430}
   m_Layer: 0
-  m_Name: Tilemap_Characters
+  m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 1647013014}
   - component: {fileID: 1647013013}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Tilemap_Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 1897268086}
   - component: {fileID: 1897268085}
   m_Layer: 0
-  m_Name: Tilemap_Base
+  m_Name: _Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
