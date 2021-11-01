@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 954028338}
   - component: {fileID: 954028337}
   - component: {fileID: 954028336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: _Scenario
   m_TagString: Scenario
   m_Icon: {fileID: 0}
@@ -3393,18 +3393,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: e3fc3b24d307e2346bb074dd146ffff4, type: 2}
-    - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
+      propertyPath: m_Size.y
+      value: 0.9656824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02293998
+      objectReference: {fileID: 0}
+    - target: {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
-      propertyPath: playerSpeed
-      value: 5
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: playerJumpForce
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8602340351423783911, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}

@@ -6,26 +6,27 @@ public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D playerRb;
     Animator playerAnim;
+    BoxCollider2D playerFeet;
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
     [SerializeField] float playerJumpForce = 1;
 
     bool turnedRight = true;
-    [SerializeField] bool isOnGround;
     [SerializeField] bool hasJumped;
 
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        playerFeet = GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
     {
         PlayerMovement();
 
-        if (isOnGround && hasJumped)
+        if (hasJumped)
             PlayerJump();
     }
 
@@ -33,17 +34,8 @@ public class PlayerScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Scenario")
         {
-            isOnGround = true;
             hasJumped = false;
             playerAnim.SetBool("isJumping", false);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Scenario")
-        {
-            isOnGround = false;
         }
     }
 
@@ -85,8 +77,9 @@ public class PlayerScript : MonoBehaviour
 
     void PlayerJump()
     {
+        if (!playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
+
         playerRb.AddForce(new Vector2(0f, playerJumpForce), ForceMode2D.Impulse);
         playerAnim.SetBool("isJumping", true);
-        hasJumped = false;
     }
 }
