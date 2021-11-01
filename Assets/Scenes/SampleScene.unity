@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 954028336}
   m_Layer: 0
   m_Name: _Scenario
-  m_TagString: Untagged
+  m_TagString: Scenario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3395,6 +3395,11 @@ PrefabInstance:
     - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: playerSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
+        type: 3}
+      propertyPath: playerJumpForce
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8602340351423783911, guid: 73cacf7ff50e09a4aabf8dd2e051baea,

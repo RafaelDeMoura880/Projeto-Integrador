@@ -9,9 +9,11 @@ public class PlayerScript : MonoBehaviour
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
+    [SerializeField] float playerJumpForce = 1;
 
     bool turnedRight = true;
     [SerializeField] bool isOnGround;
+    [SerializeField] bool hasJumped;
 
     private void Start()
     {
@@ -22,6 +24,33 @@ public class PlayerScript : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
+
+        if (isOnGround && hasJumped)
+            PlayerJump();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Scenario")
+        {
+            isOnGround = true;
+            hasJumped = false;
+            playerAnim.SetBool("isJumping", false);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Scenario")
+        {
+            isOnGround = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            hasJumped = true;
     }
 
     void PlayerMovement()
@@ -52,5 +81,12 @@ public class PlayerScript : MonoBehaviour
         Vector3 auxScale = this.transform.localScale;
         auxScale.x *= -1;
         this.transform.localScale = auxScale;
+    }
+
+    void PlayerJump()
+    {
+        playerRb.AddForce(new Vector2(0f, playerJumpForce), ForceMode2D.Impulse);
+        playerAnim.SetBool("isJumping", true);
+        hasJumped = false;
     }
 }
