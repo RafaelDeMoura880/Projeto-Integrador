@@ -17,7 +17,6 @@ public class GroundCheckScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Feet")
         {
-            collision.GetComponentInParent<PlayerScript>().hasJumped = true;
             collision.GetComponentInParent<PlayerScript>().playerAnim.SetBool("isJumping", true);
         }
     }

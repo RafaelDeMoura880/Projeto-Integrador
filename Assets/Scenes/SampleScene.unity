@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 954028338}
   - component: {fileID: 954028337}
   - component: {fileID: 954028336}
+  - component: {fileID: 954028339}
   m_Layer: 8
   m_Name: _Scenario
   m_TagString: Scenario
@@ -1294,6 +1295,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &954028339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954028332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3ce625443b67d4b92267426fd4f7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &971010428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,6 +3579,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307449711, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 307449711, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e3fc3b24d307e2346bb074dd146ffff4, type: 2}
     - target: {fileID: 8602340351423783911, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: m_RootOrder
