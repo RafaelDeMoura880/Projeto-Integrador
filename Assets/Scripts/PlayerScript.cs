@@ -8,12 +8,20 @@ public class PlayerScript : MonoBehaviour
     Animator playerAnim;
     BoxCollider2D playerFeet;
 
+    [SerializeField] int score = 0;
+
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
     [SerializeField] float playerJumpForce = 1;
 
     bool turnedRight = true;
     [SerializeField] bool hasJumped;
+
+    public int Coins
+    {
+        get => score;
+        set => score = value;
+    }
 
     private void Start()
     {
