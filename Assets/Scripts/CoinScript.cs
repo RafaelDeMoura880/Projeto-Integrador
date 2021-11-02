@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinScript : MonoBehaviour
+public class CoinScript : Collectibles
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.GetComponent<PlayerScript>().Money += 1;
-            Destroy(this.gameObject);
+            AddScore(1);
         }
     }
 }

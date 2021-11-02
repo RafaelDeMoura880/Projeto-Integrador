@@ -4,24 +4,16 @@ using UnityEngine;
 
 public abstract class Collectibles : MonoBehaviour
 {
-    public int scoreToAdd;
+    public PlayerScript refJogador;
 
-    public virtual void Start()
+    public void Start()
     {
-        scoreToAdd = 0;
+        refJogador = GameObject.Find("Player").GetComponent<PlayerScript>();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void AddScore(int scoreToAdd)
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            collision.GetComponent<PlayerScript>().Money += scoreToAdd;
-            Destroy(this.gameObject);
-        }
-    }
-
-    public void AddScore()
-    {
-
+        refJogador.Money += scoreToAdd;
+        Destroy(this.gameObject);
     }
 }
