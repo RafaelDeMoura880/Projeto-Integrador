@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
-        playerFeet = GetComponent<BoxCollider2D>();
+        playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()

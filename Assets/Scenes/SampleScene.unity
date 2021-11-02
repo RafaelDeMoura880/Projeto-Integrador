@@ -3566,47 +3566,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8641267
-      objectReference: {fileID: 0}
-    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9656824
-      objectReference: {fileID: 0}
-    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0009458065
-      objectReference: {fileID: 0}
-    - target: {fileID: 1696044600, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.02293998
-      objectReference: {fileID: 0}
-    - target: {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.10519314
-      objectReference: {fileID: 0}
-    - target: {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: e3fc3b24d307e2346bb074dd146ffff4, type: 2}
-    - target: {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.010405064
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
-        type: 3}
-      propertyPath: playerJumpForce
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8602340351423783911, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: m_RootOrder
@@ -3667,7 +3626,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 607752764793250458, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73cacf7ff50e09a4aabf8dd2e051baea, type: 3}
 --- !u!1001 &9115256149090704343
 PrefabInstance:
