@@ -8,7 +8,7 @@ public class CoinScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.GetComponent<PlayerScript>().Coins += 1;
+            collision.GetComponent<PlayerScript>().Money += 1;
             Destroy(this.gameObject);
         }
     }

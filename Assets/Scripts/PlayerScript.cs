@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     bool turnedRight = true;
     [SerializeField] bool hasJumped;
 
-    public int Coins
+    public int Money
     {
         get => score;
         set => score = value;
