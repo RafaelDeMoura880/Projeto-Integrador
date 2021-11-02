@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D playerRb;
-    Animator playerAnim;
     BoxCollider2D playerFeet;
+    public Animator playerAnim;
 
     [SerializeField] int score = 0;
 
@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float playerJumpForce = 1;
 
     bool turnedRight = true;
-    [SerializeField] bool hasJumped;
+    public bool hasJumped;
 
     public int Money
     {
@@ -38,20 +38,13 @@ public class PlayerScript : MonoBehaviour
             PlayerJump();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Scenario")
-        {
-            hasJumped = false;
-            playerAnim.SetBool("isJumping", false);
-        }
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             hasJumped = true;
     }
+
+    //..
 
     void PlayerMovement()
     {
