@@ -3591,6 +3591,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: e3fc3b24d307e2346bb074dd146ffff4, type: 2}
+    - target: {fileID: 3479423358303932187, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
+        type: 3}
+      propertyPath: playerJumpForce
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8602340351423783911, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: m_RootOrder
