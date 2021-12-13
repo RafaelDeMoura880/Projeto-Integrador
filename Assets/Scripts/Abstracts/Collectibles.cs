@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Collectibles : MonoBehaviour
 {
     public PlayerScript refJogador;
+    public CanvasScript refCanvas;
 
     public void Start()
     {

@@ -17,6 +17,8 @@ public class PlayerScript : MonoBehaviour
     bool turnedRight = true;
     public bool hasJumped;
 
+    public static PlayerScript instance;
+
     public int Money
     {
         get => score;
@@ -28,6 +30,7 @@ public class PlayerScript : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
+        instance = this;
     }
 
     private void FixedUpdate()
