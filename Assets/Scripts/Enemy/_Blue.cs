@@ -4,49 +4,38 @@ using UnityEngine;
 
 public class _Blue : Enemies
 {
-    BoxCollider2D playerTrigger;
-    float playerTriggerSize;
-    Animator enemyBlueAnim;
+    public Animator enemyBlueAnim;
     Rigidbody2D enemyBlueRb;
-
     bool turnedLeft = true;
+    public bool ativo = false;
     
     public override void Start()
     {
         enemyMovement = 5f;
-        enemySpeed = 5f;
-
-        playerTrigger = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
-        playerTriggerSize = this.transform.GetChild(0).GetComponent<BoxCollider2D>().size.x;
+        enemySpeed = -5f;
 
         enemyBlueAnim = GetComponent<Animator>();
         enemyBlueRb = GetComponent<Rigidbody2D>();
     }
 
+    private void FixedUpdate()
+    {
+        if (ativo)
+            enemyBlueRb.velocity = new Vector2(enemySpeed, enemyBlueRb.velocity.y);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            enemyBlueAnim.SetBool("isOnTrigger", true);
-            //enemyBlueRb.velocity = new Vector2(enemyMovement * -1,)
-        }
+        if (collision.gameObject.tag == "Limites")
+            Flip();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void Flip()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            enemyBlueAnim.SetBool("isOnTrigger", false);
-        }
-    }
-
-    void Flip()
-    {
+        enemySpeed *= -1;
         turnedLeft = !turnedLeft;
-
         Vector3 auxScale = this.transform.localScale;
         auxScale.x *= -1;
-
         this.transform.localScale = auxScale;
     }
 }
