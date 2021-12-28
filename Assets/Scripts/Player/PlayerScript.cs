@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D playerRb;
     BoxCollider2D playerFeet;
     public Animator playerAnim;
+    Slider barraVida;
+    RectTransform barraVidaScale;
 
     [SerializeField] int score = 0;
     [SerializeField] int energy = 100;
@@ -37,6 +40,12 @@ public class PlayerScript : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
+
+        barraVida = this.transform.GetChild(1).transform.GetChild(0).GetComponent<Slider>();
+        barraVidaScale = this.transform.GetChild(1).transform.GetChild(0).GetComponent<RectTransform>();
+        barraVida.maxValue = Life;
+        barraVida.value = barraVida.maxValue;
+
         instance = this;
     }
 
@@ -52,6 +61,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             hasJumped = true;
+
+        barraVida.value = Life;
     }
 
     //..
