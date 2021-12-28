@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     public Animator playerAnim;
 
     [SerializeField] int score = 0;
+    [SerializeField] int energy = 100;
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
@@ -23,6 +24,12 @@ public class PlayerScript : MonoBehaviour
     {
         get => score;
         set => score = value;
+    }
+
+    public int Life
+    {
+        get => energy;
+        set => energy = value;
     }
 
     private void Start()

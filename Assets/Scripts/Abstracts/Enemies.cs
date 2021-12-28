@@ -12,4 +12,9 @@ public abstract class Enemies : MonoBehaviour
         enemyMovement = 0f;
         enemySpeed = 0f;
     }
+
+    public void Dano(int _damage)
+    {
+        PlayerScript.instance.Life -= _damage;
+    }
 }

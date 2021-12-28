@@ -28,6 +28,8 @@ public class _Blue : Enemies
     {
         if (collision.gameObject.tag == "Limites")
             Flip();
+        if (collision.gameObject.tag == "Player")
+            Dano(10);
     }
 
     public void Flip()
