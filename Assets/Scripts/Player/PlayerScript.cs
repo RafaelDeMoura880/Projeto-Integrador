@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] int score = 0;
     [SerializeField] int energy = 100;
+    public static int Hearts = 3;
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
