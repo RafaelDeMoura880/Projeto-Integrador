@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class Enemies : MonoBehaviour
 {
@@ -16,5 +17,13 @@ public abstract class Enemies : MonoBehaviour
     public void Dano(int _damage)
     {
         PlayerScript.instance.Life -= _damage;
+        if(PlayerScript.instance.Life <= 0)
+        {
+            if(PlayerScript.Hearts > 0)
+            {
+                PlayerScript.Hearts -= 1;
+                SceneManager.LoadScene("PIJogo");
+            }
+        }
     }
 }
