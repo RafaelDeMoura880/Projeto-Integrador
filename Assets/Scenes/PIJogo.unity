@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 772854661}
   - component: {fileID: 772854663}
   - component: {fileID: 772854662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Limites
   m_TagString: Limites
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 773690206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inimigo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2275,7 +2275,7 @@ GameObject:
   - component: {fileID: 1228795024}
   - component: {fileID: 1228795025}
   - component: {fileID: 1228795026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: playerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2936,7 +2936,7 @@ GameObject:
   - component: {fileID: 1785807505}
   - component: {fileID: 1785807504}
   - component: {fileID: 1785807509}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_Blue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2959,7 +2959,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: e3fc3b24d307e2346bb074dd146ffff4, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
