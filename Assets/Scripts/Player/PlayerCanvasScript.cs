@@ -6,22 +6,20 @@ using UnityEngine.UI;
 public class PlayerCanvasScript : MonoBehaviour
 {
     Slider barraVida;
-    GameObject refJogador;
+    PlayerScript refJogador;
     int vidaJogador;
 
     private void Start()
     {
-        barraVida = this.transform.GetChild(0).GetComponent<Slider>();
-        vidaJogador = PlayerScript.instance.Life;
-        barraVida.maxValue = vidaJogador;
-        barraVida.value = barraVida.maxValue;
+        refJogador = GameObject.Find("Player").GetComponent<PlayerScript>();
 
-        refJogador = GameObject.Find("Player").gameObject;
+        barraVida = this.transform.GetChild(0).GetComponent<Slider>();
+        barraVida.maxValue = refJogador.Life;
+        barraVida.value = barraVida.maxValue;
     }
 
     private void Update()
     {
-        vidaJogador = PlayerScript.instance.Life;
-        barraVida.value = vidaJogador;
+        barraVida.value = refJogador.Life;
     }
 }
