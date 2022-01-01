@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     BoxCollider2D playerFeet;
     public Animator playerAnim;
     Slider barraVida;
-    RectTransform barraVidaScale;
+    //RectTransform barraVidaScale;
 
     [SerializeField] int score = 0;
     [SerializeField] int energy = 100;
@@ -44,7 +44,6 @@ public class PlayerScript : MonoBehaviour
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
 
         barraVida = this.transform.GetChild(1).transform.GetChild(0).GetComponent<Slider>();
-        barraVidaScale = this.transform.GetChild(1).transform.GetChild(0).GetComponent<RectTransform>();
         barraVida.maxValue = Life;
         barraVida.value = barraVida.maxValue;
 

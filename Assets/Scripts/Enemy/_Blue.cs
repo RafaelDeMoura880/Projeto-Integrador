@@ -22,6 +22,8 @@ public class _Blue : Enemies
     {
         if (ativo)
             enemyBlueRb.velocity = new Vector2(enemySpeed, enemyBlueRb.velocity.y);
+        else
+            enemyBlueRb.velocity = new Vector2(0, enemyBlueRb.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
