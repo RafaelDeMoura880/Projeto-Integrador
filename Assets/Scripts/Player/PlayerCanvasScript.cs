@@ -7,7 +7,6 @@ public class PlayerCanvasScript : MonoBehaviour
 {
     Slider barraVida;
     PlayerScript refJogador;
-    int vidaJogador;
 
     private void Start()
     {
@@ -21,5 +20,7 @@ public class PlayerCanvasScript : MonoBehaviour
     private void Update()
     {
         barraVida.value = refJogador.Life;
+
+        this.transform.position = refJogador.playerLocation;
     }
 }
