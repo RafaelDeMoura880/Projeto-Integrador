@@ -24,6 +24,10 @@ public abstract class Enemies : MonoBehaviour
                 PlayerScript.Hearts -= 1;
                 SceneManager.LoadScene("PIJogo");
             }
+            else
+            {
+                SceneManager.LoadScene("Endgame");
+            }
         }
     }
 }
