@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public Text gameOverText;
-    //public static bool hasStarted = false;
     public static string terminouText = "Projeto Integrador";
 
     private void Start()
@@ -18,17 +17,12 @@ public class MenuScript : MonoBehaviour
 
     private void Update()
     {
-        //if (PlayerScript.hasWon == false && hasStarted == true)
-        //    gameOverText.text = "Derrota";
-        //if (PlayerScript.hasWon == false && hasStarted == false)
-        //    gameOverText.text = "Projeto Integrador";
         gameOverText.text = terminouText;
     }
 
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
-        //hasStarted = true;
     }
 
     public void ExitGame()
