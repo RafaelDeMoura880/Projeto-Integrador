@@ -22,11 +22,11 @@ public abstract class Enemies : MonoBehaviour
             if(PlayerScript.Hearts > 0)
             {
                 PlayerScript.Hearts -= 1;
-                SceneManager.LoadScene("PIJogo");
+                SceneManager.LoadScene(1);
             }
             else
             {
-                SceneManager.LoadScene("Endgame");
+                SceneManager.LoadScene(0);
             }
         }
     }

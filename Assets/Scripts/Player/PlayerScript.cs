@@ -22,9 +22,10 @@ public class PlayerScript : MonoBehaviour
 
     bool turnedRight = true;
     public bool hasJumped;
+    //public bool hasWon = false;
 
     public static PlayerScript instance;
-
+    
     public int Money
     {
         get => score;
