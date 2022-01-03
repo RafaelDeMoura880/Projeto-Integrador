@@ -26,6 +26,7 @@ public abstract class Enemies : MonoBehaviour
             }
             else
             {
+                MenuScript.terminouText = "Derrota";
                 SceneManager.LoadScene(0);
             }
         }

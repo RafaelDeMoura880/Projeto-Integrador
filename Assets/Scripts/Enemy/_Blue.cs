@@ -6,6 +6,7 @@ public class _Blue : Enemies
 {
     public Animator enemyBlueAnim;
     Rigidbody2D enemyBlueRb;
+    BoxCollider2D enemyHead;
     bool turnedLeft = true;
     public bool ativo = false;
     
@@ -16,6 +17,7 @@ public class _Blue : Enemies
 
         enemyBlueAnim = GetComponent<Animator>();
         enemyBlueRb = GetComponent<Rigidbody2D>();
+        enemyHead = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
