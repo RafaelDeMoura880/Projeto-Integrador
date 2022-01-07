@@ -8,6 +8,8 @@ public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D playerRb;
     BoxCollider2D playerFeet;
+    public AudioSource gameSounds;
+    public AudioClip pickUpSound;
     public Animator playerAnim;
 
     public Vector2 playerLocation;
@@ -42,6 +44,7 @@ public class PlayerScript : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
+        gameSounds = this.gameObject.GetComponent<AudioSource>();
 
         instance = this;
     }
