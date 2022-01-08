@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D playerRb;
     BoxCollider2D playerFeet;
     public AudioSource gameSounds;
+    public AudioSource soundtrack;
     public AudioClip pickUpSound;
     public Animator playerAnim;
 
@@ -45,6 +46,8 @@ public class PlayerScript : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
         gameSounds = this.gameObject.GetComponent<AudioSource>();
+        soundtrack = GameObject.Find("Cameras").transform.GetChild(0).GetComponent<AudioSource>();
+        soundtrack.Play();
 
         instance = this;
     }
