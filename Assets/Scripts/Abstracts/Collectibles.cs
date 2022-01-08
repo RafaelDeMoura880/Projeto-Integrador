@@ -17,4 +17,9 @@ public abstract class Collectibles : MonoBehaviour
         refJogador.Money += scoreToAdd;
         Destroy(this.gameObject);
     }
+
+    public void AddKey()
+    {
+        refJogador.hasKey = true;
+    }
 }
