@@ -17,7 +17,8 @@ public abstract class Enemies : MonoBehaviour
     public void Dano(int _damage)
     {
         PlayerScript.instance.Life -= _damage;
-        if(PlayerScript.instance.Life <= 0)
+        PlayerScript.instance.playerAnim.SetTrigger("isHit");
+        if (PlayerScript.instance.Life <= 0)
         {
             if(PlayerScript.Hearts > 0)
             {
