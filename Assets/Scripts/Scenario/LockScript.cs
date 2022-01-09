@@ -10,7 +10,14 @@ public class LockScript : MonoBehaviour
         {
             PlayerScript.instance.hasKey = false;
             CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            Destroy(this.gameObject);
+            StartCoroutine(PlayLockSound());
         }
+    }
+
+    IEnumerator PlayLockSound()
+    {
+        PlayerScript.instance.gameSounds.PlayOneShot(PlayerScript.instance.lockSoundTrimmed);
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
     }
 }

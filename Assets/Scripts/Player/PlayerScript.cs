@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     public AudioSource gameSounds;
     public AudioSource soundtrack;
     public AudioClip pickUpSound;
+    public AudioClip lockSoundTrimmed;
     public Animator playerAnim;
 
     public Vector2 playerLocation;
