@@ -7,6 +7,7 @@ public class CanvasScript : MonoBehaviour
 {
     GameObject[] hearts;    
     public Text coinCountText;
+    public static CanvasScript instanceCanvas;
 
     private void Start()
     {
@@ -20,6 +21,8 @@ public class CanvasScript : MonoBehaviour
         
         coinCountText = this.transform.GetChild(1).GetComponent<Text>();
         coinCountText.text = "0";
+
+        instanceCanvas = this;
     }
 
     private void Update()
