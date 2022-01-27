@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour
     public bool hasKey = false;
 
     public static PlayerScript instance;
-    
+
     public int Money
     {
         get => score;
@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Endgame")
+        if (collision.gameObject.tag == "Endgame")
         {
             MenuScript.terminouText = "Vitória";
             SceneManager.LoadScene(0);
