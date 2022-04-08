@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerScript : MonoBehaviour
 {
     Rigidbody2D playerRb;
+    Collider2D playerCollider;
     BoxCollider2D playerFeet;
     public AudioSource gameSounds;
     public AudioSource soundtrack;
@@ -117,5 +118,10 @@ public class PlayerScript : MonoBehaviour
 
         playerRb.AddForce(new Vector2(0f, playerJumpForce), ForceMode2D.Impulse);
         playerAnim.SetBool("isJumping", true);
+    }
+
+    void ClimbLadder()
+    {
+        if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { return; }
     }
 }
