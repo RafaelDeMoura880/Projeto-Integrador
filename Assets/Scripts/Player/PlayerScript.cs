@@ -46,6 +46,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
         gameSounds = this.gameObject.GetComponent<AudioSource>();
@@ -76,6 +77,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             hasJumped = true;
+
+        ClimbLadder();
 
         playerLocation = this.transform.position;
     }
