@@ -9,6 +9,7 @@ public class KeyScript : Collectibles
         if(collision.gameObject.tag == "Player" && PlayerScript.instance.Money == 1)
         {
             PlayerScript.instance.hasKey = true;
+            PlayerScript.instance.Money--;
             CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
             Destroy(this.gameObject);
         }
