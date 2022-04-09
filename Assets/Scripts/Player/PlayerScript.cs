@@ -123,5 +123,8 @@ public class PlayerScript : MonoBehaviour
     void ClimbLadder()
     {
         if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { return; }
+
+        float playerClimbing = Input.GetAxis("Vertical");
+        playerRb.velocity = new Vector2(playerRb.velocity.x, playerClimbing * playerSpeed);
     }
 }
