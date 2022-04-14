@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    Rigidbody2D playerRb;
+    public Rigidbody2D playerRb;
     Collider2D playerCollider;
     BoxCollider2D playerFeet;
     public AudioSource gameSounds;
