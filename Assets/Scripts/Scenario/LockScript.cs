@@ -8,8 +8,7 @@ public class LockScript : MonoBehaviour
     {
         if (PlayerScript.instance.hasKey)
         {
-            PlayerScript.instance.hasKey = false;
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+            PlayerScript.instance.keyAmount -= 1;
             StartCoroutine(PlayLockSound());
         }
     }

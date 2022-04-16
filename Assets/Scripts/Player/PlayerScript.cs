@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] int energy = 100;
     public static int Hearts = 3;
     public int levers = 0;
+    public int keyAmount = 0;
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
@@ -82,6 +83,36 @@ public class PlayerScript : MonoBehaviour
         ClimbLadder();
 
         playerLocation = this.transform.position;
+
+        if (keyAmount > 0)
+            hasKey = true;
+        else
+            hasKey = false;
+
+        if(!hasKey)
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).
+                gameObject.SetActive(false);
+        else
+            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
+
+        if (keyAmount == 1)
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                gameObject.SetActive(false);
+        
+        if(keyAmount == 2)
+        {
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                gameObject.SetActive(true);
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                    transform.GetChild(1).gameObject.SetActive(false);
+        }  
+        if (keyAmount == 3)
+        {
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                transform.GetChild(0).gameObject.SetActive(false);
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 
     //..

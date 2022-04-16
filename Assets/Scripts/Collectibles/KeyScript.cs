@@ -8,11 +8,10 @@ public class KeyScript : Collectibles
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && PlayerScript.instance.Money == keyValue)
+        if(collision.gameObject.tag == "Player" && PlayerScript.instance.Money >= keyValue)
         {
-            PlayerScript.instance.hasKey = true;
+            PlayerScript.instance.keyAmount += 1;
             PlayerScript.instance.Money -= keyValue;
-            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
             Destroy(this.gameObject);
         }
     }
