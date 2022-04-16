@@ -51,6 +51,9 @@ TagManager:
   - name: Background
     uniqueID: 1791351017
     locked: 0
+  - name: Backfront
+    uniqueID: 2344154201
+    locked: 0
   - name: Climbing
     uniqueID: 3743174993
     locked: 0

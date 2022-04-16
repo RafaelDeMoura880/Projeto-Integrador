@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] int score = 0;
     [SerializeField] int energy = 100;
     public static int Hearts = 3;
+    public int levers = 0;
 
     float playerMovement;
     [SerializeField] float playerSpeed = 1;
