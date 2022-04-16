@@ -85,16 +85,17 @@ public class PlayerScript : MonoBehaviour
         playerLocation = this.transform.position;
 
         if (keyAmount > 0)
+        {
             hasKey = true;
+            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
+        }
         else
+        {
             hasKey = false;
-
-        if(!hasKey)
             CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).
                 gameObject.SetActive(false);
-        else
-            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
-
+        }
+            
         if (keyAmount == 1)
             CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
                 gameObject.SetActive(false);
