@@ -81,39 +81,9 @@ public class PlayerScript : MonoBehaviour
             hasJumped = true;
 
         ClimbLadder();
+        KeyCounter();
 
         playerLocation = this.transform.position;
-
-        if (keyAmount > 0)
-        {
-            hasKey = true;
-            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
-        }
-        else
-        {
-            hasKey = false;
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).
-                gameObject.SetActive(false);
-        }
-            
-        if (keyAmount == 1)
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
-                gameObject.SetActive(false);
-        
-        if(keyAmount == 2)
-        {
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
-                gameObject.SetActive(true);
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
-                    transform.GetChild(1).gameObject.SetActive(false);
-        }  
-        if (keyAmount == 3)
-        {
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
-                transform.GetChild(0).gameObject.SetActive(false);
-            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
-                transform.GetChild(1).gameObject.SetActive(true);
-        }
     }
 
     //..
@@ -166,6 +136,34 @@ public class PlayerScript : MonoBehaviour
 
     void KeyCounter()
     {
+        if (keyAmount > 0)
+        {
+            hasKey = true;
+            CanvasScript.instanceCanvas.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        else
+        {
+            hasKey = false;
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(3).
+                gameObject.SetActive(false);
+        }
 
+        if (keyAmount == 1)
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                gameObject.SetActive(false);
+        if (keyAmount == 2)
+        {
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                gameObject.SetActive(true);
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                    transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (keyAmount == 3)
+        {
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                transform.GetChild(0).gameObject.SetActive(false);
+            CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
+                transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 }
