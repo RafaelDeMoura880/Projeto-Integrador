@@ -163,4 +163,9 @@ public class PlayerScript : MonoBehaviour
         float playerClimbing = Input.GetAxis("Vertical");
         playerRb.velocity = new Vector2(playerRb.velocity.x, playerClimbing * playerSpeed);
     }
+
+    void KeyCounter()
+    {
+
+    }
 }
