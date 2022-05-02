@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     public int keyAmount = 0;
 
     float playerMovement;
+    float gravityScaleAtStart;
     [SerializeField] float playerSpeed = 1;
     [SerializeField] float playerJumpForce = 1;
 
@@ -48,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        gravityScaleAtStart = playerRb.gravityScale;
         playerCollider = GetComponent<Collider2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = this.transform.GetChild(0).GetComponent<BoxCollider2D>();
@@ -128,10 +130,15 @@ public class PlayerScript : MonoBehaviour
 
     void ClimbLadder()
     {
-        if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { return; }
+        if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            playerRb.gravityScale = gravityScaleAtStart;
+            return; 
+        }
 
         float playerClimbing = Input.GetAxis("Vertical");
         playerRb.velocity = new Vector2(playerRb.velocity.x, playerClimbing * playerSpeed);
+        playerRb.gravityScale = 0f;
     }
 
     void KeyCounter()
