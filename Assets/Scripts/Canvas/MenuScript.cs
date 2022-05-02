@@ -25,6 +25,18 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ShowTutorialPanel()
+    {
+        this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        this.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        this.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
