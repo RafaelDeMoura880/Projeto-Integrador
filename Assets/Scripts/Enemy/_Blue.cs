@@ -9,11 +9,12 @@ public class _Blue : Enemies
     BoxCollider2D enemyHead;
     bool turnedLeft = true;
     public bool ativo = false;
+    [SerializeField] float thisEnemySpeed = 0;
     
     public override void Start()
     {
         enemyMovement = 5f;
-        enemySpeed = -5f;
+        enemySpeed = thisEnemySpeed;
 
         enemyBlueAnim = GetComponent<Animator>();
         enemyBlueRb = GetComponent<Rigidbody2D>();
