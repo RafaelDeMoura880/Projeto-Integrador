@@ -60,15 +60,6 @@ public class PlayerScript : MonoBehaviour
         instance = this;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Endgame")
-        {
-            MenuScript.terminouText = "Vitória";
-            SceneManager.LoadScene(0);
-        }
-    }
-
     private void FixedUpdate()
     {
         PlayerMovement();
@@ -84,6 +75,9 @@ public class PlayerScript : MonoBehaviour
 
         ClimbLadder();
         KeyCounter();
+
+        if (levers == 3)
+            StartCoroutine(Endgame());
 
         playerLocation = this.transform.position;
     }
@@ -172,5 +166,12 @@ public class PlayerScript : MonoBehaviour
             CanvasScript.instanceCanvas.gameObject.transform.GetChild(4).
                 transform.GetChild(1).gameObject.SetActive(true);
         }
+    }
+    
+    IEnumerator Endgame()
+    {
+        yield return new WaitForSeconds(5f);
+        MenuScript.terminouText = "Vitória";
+        SceneManager.LoadScene(0);
     }
 }
