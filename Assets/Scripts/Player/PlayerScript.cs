@@ -15,6 +15,8 @@ public class PlayerScript : MonoBehaviour
     public AudioClip lockSoundTrimmed;
     public Animator playerAnim;
 
+    public Vector2 playerStartLocation;
+    public Vector2 playerCheckpointLocation;
     public Vector2 playerLocation;
 
     [SerializeField] int score = 0;
@@ -29,6 +31,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float playerJumpForce = 1;
 
     bool turnedRight = true;
+    public bool isOnCheckpoint = false;
     public bool hasJumped;
     public bool hasKey = false;
 
@@ -56,6 +59,7 @@ public class PlayerScript : MonoBehaviour
         gameSounds = this.gameObject.GetComponent<AudioSource>();
         soundtrack = GameObject.Find("Cameras").transform.GetChild(0).GetComponent<AudioSource>();
         soundtrack.Play();
+        playerStartLocation = this.transform.position;
 
         instance = this;
     }
@@ -66,6 +70,15 @@ public class PlayerScript : MonoBehaviour
 
         if (hasJumped)
             PlayerJump();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Checkpoint")
+        {
+            isOnCheckpoint = true;
+            playerCheckpointLocation = collision.gameObject.transform.position;
+        }
     }
 
     private void Update()

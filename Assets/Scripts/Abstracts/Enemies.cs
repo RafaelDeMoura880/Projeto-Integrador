@@ -23,11 +23,17 @@ public abstract class Enemies : MonoBehaviour
             if(PlayerScript.Hearts > 0)
             {
                 PlayerScript.Hearts -= 1;
-                SceneManager.LoadScene(1);
+
+                if (PlayerScript.instance.isOnCheckpoint == true)
+                    PlayerScript.instance.playerLocation = PlayerScript.instance.playerCheckpointLocation;
+                else
+                    SceneManager.LoadScene(1);
             }
             else
             {
                 MenuScript.terminouText = "Derrota";
+                PlayerScript.instance.playerLocation = PlayerScript.instance.playerStartLocation;
+                PlayerScript.instance.isOnCheckpoint = false;
                 SceneManager.LoadScene(0);
             }
         }
