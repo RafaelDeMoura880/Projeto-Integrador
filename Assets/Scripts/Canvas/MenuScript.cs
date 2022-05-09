@@ -23,6 +23,7 @@ public class MenuScript : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+        PlayerScript.Hearts = 3;
     }
 
     public void ShowTutorialPanel()

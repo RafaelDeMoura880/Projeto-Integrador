@@ -11,7 +11,6 @@ public class TrapScript : Enemies
             float hit = 100f;
             PlayerScript.instance.playerRb.AddForce(collision.contacts[0].normal * hit);
             Dano(30);
-            Invoke("StopBouncing", 0.4f);
         }
     }
 }
