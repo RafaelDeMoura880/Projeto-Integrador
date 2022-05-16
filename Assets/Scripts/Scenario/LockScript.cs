@@ -4,24 +4,15 @@ using UnityEngine;
 
 public class LockScript : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (PlayerScript.instance.hasKey)
         {
-           PlayerScript.instance.keyAmount -= 1;
-           StartCoroutine(PlayLockSound());
+            PlayerScript.instance.keyAmount -= 1;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            StartCoroutine(PlayLockSound());
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (PlayerScript.instance.hasKey)
-    //    {
-    //        PlayerScript.instance.keyAmount -= 1;
-    //        this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-    //        StartCoroutine(PlayLockSound());
-    //    }
-    //}
 
     IEnumerator PlayLockSound()
     {
