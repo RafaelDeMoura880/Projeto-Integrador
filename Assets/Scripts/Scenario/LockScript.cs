@@ -8,10 +8,20 @@ public class LockScript : MonoBehaviour
     {
         if (PlayerScript.instance.hasKey)
         {
-            PlayerScript.instance.keyAmount -= 1;
-            StartCoroutine(PlayLockSound());
+           PlayerScript.instance.keyAmount -= 1;
+           StartCoroutine(PlayLockSound());
         }
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (PlayerScript.instance.hasKey)
+    //    {
+    //        PlayerScript.instance.keyAmount -= 1;
+    //        this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+    //        StartCoroutine(PlayLockSound());
+    //    }
+    //}
 
     IEnumerator PlayLockSound()
     {

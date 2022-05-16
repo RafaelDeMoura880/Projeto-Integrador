@@ -9,6 +9,7 @@ public class LeverScript : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             this.gameObject.GetComponent<Animator>().SetTrigger("activateLever");
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             PlayerScript.instance.levers += 1;
         }
     }
