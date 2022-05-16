@@ -346,12 +346,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1812413331}
   - {fileID: 1013095516}
   - {fileID: 1834523793}
   - {fileID: 1427944371}
   - {fileID: 1836794093}
   - {fileID: 1693997643}
+  - {fileID: 1812413331}
   m_Father: {fileID: 693238178}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1285,7 +1285,7 @@ RectTransform:
   - {fileID: 1773350432}
   - {fileID: 2012249534}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 1240297145}
   - component: {fileID: 1240297144}
   m_Layer: 5
-  m_Name: Projeto Integrador
+  m_Name: Projeto IntegradorTitleTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,7 +1377,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Projeto Integrador
+  m_Text: Coriolanos Revenge
 --- !u!222 &1240297146
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1716,7 +1716,7 @@ RectTransform:
   - {fileID: 946194142}
   - {fileID: 924951158}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2037,7 +2037,7 @@ RectTransform:
   - {fileID: 1416061554}
   - {fileID: 2024540841}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4255,11 +4255,11 @@ RectTransform:
   m_Children:
   - {fileID: 71202392}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: 123}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -38, y: 15}
   m_SizeDelta: {x: 63.872223, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1812413332
@@ -4384,7 +4384,7 @@ RectTransform:
   - {fileID: 326775917}
   - {fileID: 774830574}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4422,7 +4422,7 @@ RectTransform:
   - {fileID: 86926062}
   - {fileID: 1743489411}
   m_Father: {fileID: 290212456}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
