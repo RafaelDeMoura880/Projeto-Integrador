@@ -17,10 +17,13 @@ public class PlayerCanvasScript : MonoBehaviour
         barraVida.value = barraVida.maxValue;
     }
 
+    private void FixedUpdate()
+    {
+        this.transform.position = refJogador.playerLocation;
+    }
+
     private void Update()
     {
         barraVida.value = refJogador.Life;
-
-        this.transform.position = refJogador.playerLocation;
     }
 }
