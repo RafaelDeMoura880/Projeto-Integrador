@@ -8,9 +8,8 @@ public class TrapScript : Enemies
     {
         if (collision.gameObject.tag == "Player")
         {
-            float hit = 100f;
-            PlayerScript.instance.playerRb.AddForce(collision.contacts[0].normal * hit);
             Dano(30);
+            PlayerScript.instance.gameSounds.PlayOneShot(PlayerScript.instance.trapSound, 3);
         }
     }
 }

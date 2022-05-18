@@ -3451,7 +3451,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0662dab14f9165a4db77a97af3827a57, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.087
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3586,7 +3586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -514.0768, y: -297.58804, z: 16.814806}
+  m_LocalPosition: {x: -532.214, y: -299.934, z: 16.814806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1063562619}
@@ -35388,7 +35388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 18.27, y: 2.86}
+  m_AnchoredPosition: {x: -7.4, y: -2.15}
   m_SizeDelta: {x: 2.2352562, y: 2.0582142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401411249
@@ -100954,7 +100954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943134402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -514.0768, y: -297.58804, z: 16.814806}
+  m_LocalPosition: {x: -539.74677, y: -302.59802, z: 16.814806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1696507739}
@@ -105363,6 +105363,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5507430216254708940, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
+      propertyPath: keySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 504e20ba2f6d8ab47a5a6f8acaf1ff1b, type: 3}
+    - target: {fileID: 5507430216254708940, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
+        type: 3}
+      propertyPath: trapSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a5f88e499856f7143b46efa5d9e0cbe2, type: 3}
+    - target: {fileID: 5507430216254708940, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
+        type: 3}
       propertyPath: pickUpSound
       value: 
       objectReference: {fileID: 8300000, guid: 21f07414187d0ee41ba781d93209e8ef, type: 3}
@@ -105389,12 +105399,12 @@ PrefabInstance:
     - target: {fileID: 6391483390059079730, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.299992
+      value: -7.3700085
       objectReference: {fileID: 0}
     - target: {fileID: 6391483390059079730, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5900035
+      value: -2.4199967
       objectReference: {fileID: 0}
     - target: {fileID: 6391483390059079730, guid: 73cacf7ff50e09a4aabf8dd2e051baea,
         type: 3}

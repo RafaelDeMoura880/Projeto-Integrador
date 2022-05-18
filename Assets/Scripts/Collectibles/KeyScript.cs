@@ -12,6 +12,7 @@ public class KeyScript : Collectibles
         {
             PlayerScript.instance.keyAmount += 1;
             PlayerScript.instance.Money -= keyValue;
+            PlayerScript.instance.gameSounds.PlayOneShot(PlayerScript.instance.keySound);
             Destroy(this.gameObject);
         }
     }

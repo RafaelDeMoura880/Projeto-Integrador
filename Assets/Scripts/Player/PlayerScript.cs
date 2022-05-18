@@ -9,10 +9,14 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D playerRb;
     Collider2D playerCollider;
     BoxCollider2D playerFeet;
+
     public AudioSource gameSounds;
     public AudioSource soundtrack;
     public AudioClip pickUpSound;
     public AudioClip lockSoundTrimmed;
+    public AudioClip trapSound;
+    public AudioClip keySound;
+
     public Animator playerAnim;
 
     public Vector2 playerStartLocation;
