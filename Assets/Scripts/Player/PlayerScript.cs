@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     public Animator playerAnim;
 
     public Vector2 playerStartLocation;
-    public Vector2 playerCheckpointLocation;
+    public static Vector2 playerCheckpointLocation;
     public Vector2 playerLocation;
 
     [SerializeField] int score = 0;
@@ -70,15 +70,6 @@ public class PlayerScript : MonoBehaviour
 
         if (hasJumped)
             PlayerJump();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Checkpoint")
-        {
-            isOnCheckpoint = true;
-            playerCheckpointLocation = collision.gameObject.transform.position;
-        }
     }
 
     private void Update()
