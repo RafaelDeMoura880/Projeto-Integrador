@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public Text gameOverText;
-    public static string terminouText = "Projeto Integrador";
+    public static string terminouText = "Coriolanos Revenge";
 
     private void Start()
     {
