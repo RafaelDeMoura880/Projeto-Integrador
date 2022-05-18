@@ -25,7 +25,7 @@ public abstract class Enemies : MonoBehaviour
                 PlayerScript.Hearts -= 1;
 
                 //if (PlayerScript.instance.isOnCheckpoint == true)
-                //    PlayerScript.instance.playerLocation = PlayerScript.instance.playerCheckpointLocation;
+                //    PlayerScript.instance.playerLocation = PlayerScript.playerCheckpointLocation;
                 //else
                     SceneManager.LoadScene(1);
             }

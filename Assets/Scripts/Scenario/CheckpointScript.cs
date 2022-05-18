@@ -8,6 +8,7 @@ public class CheckpointScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //PlayerScript.instance.isOnCheckpoint = true;
             PlayerScript.playerCheckpointLocation = this.transform.position;
             PlayerScript.instance.transform.position = PlayerScript.playerCheckpointLocation;
         }
