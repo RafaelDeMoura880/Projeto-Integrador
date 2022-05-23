@@ -12,6 +12,7 @@ TagManager:
   - Endgame
   - Diamond
   - Checkpoint
+  - BossAnnouncement
   layers:
   - Default
   - TransparentFX

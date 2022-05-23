@@ -76,6 +76,15 @@ public class PlayerScript : MonoBehaviour
             PlayerJump();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "BossAnnouncement")
+        {
+            collision.gameObject.GetComponent<AudioSource>().Play();
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
