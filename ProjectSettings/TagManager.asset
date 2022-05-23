@@ -14,6 +14,7 @@ TagManager:
   - Checkpoint
   - BossAnnouncement
   - BossTaunt
+  - BossLaugh
   layers:
   - Default
   - TransparentFX
