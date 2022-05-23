@@ -78,12 +78,11 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "BossAnnouncement" || 
-            collision.gameObject.tag == "BossAnnouncement" ||
-            collision.gameObject.tag == "BossLaugh")
+        if (collision.gameObject.tag == "BossAnnouncement")
         {
             collision.gameObject.GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            CanvasScript.instanceCanvas.bossAnnouncement += 1;
         }
     }
 
